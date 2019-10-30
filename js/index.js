@@ -87,3 +87,12 @@ bgcolorIntro.addEventListener('click', (event) => {
     bgcolorIntro.style.backgroundColor="deepskyblue";
     event.stopPropagation();
 });
+
+
+//Prevent Default
+const stopLink = document.querySelector(".nav-link");
+
+stopLink.addEventListener("click", (event) => {
+  console.log("stopped the link from refreshing");
+  event.preventDefault();
+})
