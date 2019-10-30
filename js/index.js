@@ -41,19 +41,49 @@ window.addEventListener("scroll", () => {
     }
 });
 
-
-// focus
-const navFocus = document.querySelectorAll(".nav a");
-
-// wheel
-
-
-// drag / drop
-
-
-// load
-
+//click
+const buttonEvent = document.querySelector(".destination, btn")
+    buttonEvent.addEventListener("click", () =>{
+       buttonEvent.style.color= "purple";
+    })
 
 // select
+const selectEvent = document.querySelector(".intro input")
+    selectEvent.addEventListener("select", () =>{
+       selectEvent.style.color= "green";
+    })
+
+//Focus
+    selectEvent.addEventListener('focus', (event) => {
+        event.target.style.background = 'darkgrey';    
+      }, true);  
+
+// wheel
+const wheelEvent = document.querySelector(".intro img")
+    wheelEvent.addEventListener("wheel", () =>{
+       wheelEvent.style.transform="scale(1.4)";
+    })
+
+    wheelEvent.addEventListener("dblclick", () =>{
+        wheelEvent.style.transform="scale(1)";
+     })
+
+// load
+window.addEventListener("load", (event) => {
+    alert('Welcome to the fUn BuS!');
+  });
 
 
+//Event Propagation
+
+const bgColorP = document.querySelector(".intro p")
+bgColorP.addEventListener('click', (event) => {
+    bgColorP.style.backgroundColor="tomato";
+   event.stopPropagation();
+});
+
+const bgcolorIntro= document.querySelector(".intro")
+bgcolorIntro.addEventListener('click', (event) => {
+    bgcolorIntro.style.backgroundColor="deepskyblue";
+    event.stopPropagation();
+});
